@@ -13,7 +13,7 @@ https://github.com/user-attachments/assets/4909d89e-e96e-4222-8c1c-4069eb46f832
 ## How It Works
 
 ### Lexer 
-The lexer reads raw source text character by character and emits a flat stream of tokens (Ex, `IDENT`, `INT`, `PLUS`, `Let`). It strips whitespace and flags illegal characters so errors surface early.
+The lexer reads raw source text character by character and emits a flat stream of tokens (ex, `IDENT`, `INT`, `PLUS`, `Let`). It strips whitespace and flags illegal characters so errors surface early.
 
 ### Parser
 The parser consumes the token stream and builds an **Abstract Syntax Tree (AST)** - a tree of nodes representing the program's structure. Expressions are parsed using a **Pratt parser** (top-down operator precedence), which handles precedence and associativity cleanly without a grammar table.
@@ -24,3 +24,14 @@ The evaluator walks the AST recursively, visiting each node and producing an **O
 ### Environment & Closures
 Variable bindings live in an **Environment** — a map from name to Object. Environments can enclose an outer one, which is how closures work: a function captures a reference to the environment it was defined in and can still access those bindings when called later.
 
+## Installation
+
+1. Clone the repository
+```bash
+   git clone https://github.com/tablecrasher/monkey-interpreter.git
+```
+
+2. Run the interpreter
+```bash
+   go run main.go
+```
