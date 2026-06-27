@@ -28,10 +28,10 @@ Variable bindings live in an **Environment** — a map from name to Object. Envi
 
 1. Clone the repository
 ```bash
-   git clone https://github.com/tablecrasher/monkey-interpreter.git
+git clone https://github.com/tablecrasher/monkey-interpreter.git
 ```
 
 2. Run the interpreter
 ```bash
-   go run main.go
+go run main.go
 ```
